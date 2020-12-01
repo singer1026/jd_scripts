@@ -27,8 +27,8 @@ let jxShareCodes = [
 
 
 async function setupShareCodes() {
-    await setup_dd_factory(ddShareCodes);
-    // await setup_jx_factory(jxShareCodes);
+    // await setup_dd_factory(ddShareCodes);
+    await setup_jx_factory(jxShareCodes);
 }
 function setup_dd_factory(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/"
@@ -55,7 +55,7 @@ function setup_dd_factory(shareCodes) {
 }
 
 function setup_jx_factory(shareCodes) {
-
+    console.log(shareCodes)
 }
 
 
