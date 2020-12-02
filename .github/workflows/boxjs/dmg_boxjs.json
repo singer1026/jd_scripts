@@ -1,0 +1,48 @@
+{
+    "id": "dmg.app.sub",
+    "name": "大喵哥应用订阅",
+    "author": "@ziye12",
+    "icon": "https://avatars0.githubusercontent.com/u/19585001?s=460&u= 2f5028cbd0896ebdda4efa12a8e484b56c97d424&v=4",
+    "repo": "https://github.com/ziye12/JavaScript",
+    "apps": [
+        {
+            "id": "TencentRead",
+            "name": "企鹅阅读",
+            "keys": [
+                "qqreadhd",
+                "qqreadtimeurl",
+                "qqreadtimehd"
+            ],
+            "settings": [
+                {
+                    "id": "qqreadhd",
+                    "name": "qqreadhd",
+                    "val": "",
+                    "type": "text",
+                    "desc": "qqreadhd"
+                },
+                {
+                    "id": "qqreadtimeurl",
+                    "name": "qqreadtimeurl",
+                    "val": "",
+                    "type": "text",
+                    "desc": "qqreadtimeurl"
+                },
+                {
+                    "id": "qqreadtimehd",
+                    "name": "qqreadtimehd",
+                    "val": "",
+                    "type": "text",
+                    "desc": "qqreadtimehd"
+                }
+            ],
+            "author": "@ziye12",
+            "repo": "https://github.com/ziye12/JavaScript",
+            "icons": [
+                "https://ooxx.be/js/icon/umer-trn.png",
+                "https://ooxx.be/js/icon/umer.png"
+            ],
+            "script": "https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js"
+        }
+    ]
+}
