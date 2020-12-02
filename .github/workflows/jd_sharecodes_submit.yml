@@ -6,7 +6,7 @@ name: 助力码提交
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 12 * * *'
+    - cron: '0 2 * * *'
   watch:
     types: started
   repository_dispatch:
