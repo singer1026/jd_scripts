@@ -14,27 +14,6 @@
                 "qqreadtimehd"
             ],
             "settings": [
-                {
-                    "id": "qqreadhd",
-                    "name": "qqreadhd",
-                    "val": "",
-                    "type": "text",
-                    "desc": "qqreadhd"
-                },
-                {
-                    "id": "qqreadtimeurl",
-                    "name": "qqreadtimeurl",
-                    "val": "",
-                    "type": "text",
-                    "desc": "qqreadtimeurl"
-                },
-                {
-                    "id": "qqreadtimehd",
-                    "name": "qqreadtimehd",
-                    "val": "",
-                    "type": "text",
-                    "desc": "qqreadtimehd"
-                }
             ],
             "author": "@ziye12",
             "repo": "https://github.com/ziye12/JavaScript",
