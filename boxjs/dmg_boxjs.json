@@ -7,7 +7,7 @@
     "apps": [
         {
             "id": "TencentRead",
-            "name": "企鹅阅读",
+            "name": "企鹅读书",
             "keys": [
                 "qqreadhd",
                 "qqreadtimeurl",
