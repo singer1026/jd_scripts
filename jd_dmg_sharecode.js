@@ -1,4 +1,5 @@
 const request = require('request');
+//东东工厂
 let ddShareCodes = [
     "P04z54XCjVWnYaS5jQICWDx231XkA2tQy5oreA",
     "P04z54XCjVWnYaS5m9cZ2b82XxNk27vn69kkYY",
@@ -7,7 +8,7 @@ let ddShareCodes = [
     "P04z54XCjVWnYaS5m9cZ2Srj3UZlNbwThrucUs",
     "P04z54XCjVWnYaS5m9cZ2eq23UclvDszImQb2o",
 ];
-
+//京喜工厂
 let jxShareCodes = [
     "HB0rMhLZFoJZtMY_cxDS9w==",
     "gkJDx-hnOQ-_glMijjvWhg==",
@@ -17,6 +18,7 @@ let jxShareCodes = [
     "f4484ZzDOyamcrl6gPaTqQ=="
 ];
 
+//种豆得豆
 let jdBeanShareCodes = [
     "44i54vzpozdr5h3kk3fye44d6lua4xc2awmxtra",
     "olmijoxgmjutyg34323zrqn4m4yqbotckj5cq7q",
@@ -26,11 +28,13 @@ let jdBeanShareCodes = [
     "4npkonnsy7xi2sxblpvwpaxqo3yz75cyyk2kuli"
 ];
 
+//京东农场
 let jdFruitShareCodes = [
     "8f333aa22720446f8347089776abbab7",
     "028e924bb2674242a6accfabcbb31275"
 ];
 
+//东东萌宠
 let jdPetShareCodes = [
     "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
     "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw=="
