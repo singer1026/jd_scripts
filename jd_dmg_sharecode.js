@@ -13,6 +13,8 @@ let jxShareCodes = [
     "gkJDx-hnOQ-_glMijjvWhg==",
     "JLsEgHVEqtL60bPohvdN6Q==",
     "TA-2KPQiq7T_e0lI3_y-Bw==",
+    "8rb8s6xvPNh8T-xFWpPT2g==",
+    "f4484ZzDOyamcrl6gPaTqQ=="
 ];
 
 let jdBeanShareCodes = [
@@ -24,12 +26,23 @@ let jdBeanShareCodes = [
     "4npkonnsy7xi2sxblpvwpaxqo3yz75cyyk2kuli"
 ];
 
+let jdFruitShareCodes = [
+    "8f333aa22720446f8347089776abbab7",
+    "028e924bb2674242a6accfabcbb31275"
+];
+
+let jdPetShareCodes = [
+    "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
+    "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw=="
+];
 setupShareCodes()
 
 function setupShareCodes() {
     setup_dd_factory(ddShareCodes);
     setup_jx_factory(jxShareCodes);
     setup_jd_benas(jdBeanShareCodes);
+    setup_jd_pet(jdPetShareCodes);
+    setup_jd_fruit(jdFruitShareCodes);
 }
 function setup_dd_factory(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/"
@@ -51,6 +64,21 @@ function setup_jd_benas(shareCodes){
         requestAPI(url, item)
     })
 }
+
+function setup_jd_pet(shareCodes) {
+    let url = "http://api.turinglabs.net/api/v1/jd/pet/create/互助码/"
+    shareCodes.forEach(item => {
+        requestAPI(url, item)
+    })
+}
+
+function setup_jd_fruit(shareCodes) {
+    let url = "http://api.turinglabs.net/api/v1/jd/farm/create/互助码/"
+    shareCodes.forEach(item => {
+        requestAPI(url, item)
+    })
+}
+
 
 function requestAPI(url,item){
     let urlString = url.replace("互助码", item)
