@@ -9,9 +9,9 @@
             "id": "TencentRead",
             "name": "企鹅读书",
             "keys": [
-                "qqreadhd",
-                "qqreadtimeurl",
-                "qqreadtimehd"
+                "qqreadhd1",
+                "qqreadtimeurl1",
+                "qqreadtimehd1"
             ],
             "settings": [
                 {
