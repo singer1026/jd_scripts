@@ -25,13 +25,14 @@ let jdBeanShareCodes = [
     "e7lhibzb3zek2ufl7s5ojquqfaawd36hi7vrv4a",
     "olmijoxgmjutypuvjs4um3t6w5bvfmzoq564sci",
     "e7lhibzb3zek3x6f6fg5zq6rthx775uqboh3mvi",
-    "4npkonnsy7xi2sxblpvwpaxqo3yz75cyyk2kuli"
+    "4npkonnsy7xi2sxblpvwpaxqo3yz75cyyk2kuli",
 ];
 
 //京东农场
 let jdFruitShareCodes = [
     "8f333aa22720446f8347089776abbab7",
-    "028e924bb2674242a6accfabcbb31275"
+    "028e924bb2674242a6accfabcbb31275",
+    "32dc6062e5c34fb5b0b4efbd3c400bcd"
 ];
 
 //东东萌宠
