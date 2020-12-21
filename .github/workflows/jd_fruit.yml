@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
+          git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -34,12 +34,10 @@ jobs:
       - name: npm install
         run: |
           cd ~/jd_scripts
-          git checkout -b master
           npm install
       - name: '运行 【东东农场】'
         run: |
           cd ~/jd_scripts
-          git checkout -b master
           node jd_fruit.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
