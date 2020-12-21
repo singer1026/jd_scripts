@@ -39,6 +39,7 @@ jobs:
       - name: '运行 【东东农场】'
         run: |
           cd ~/jd_scripts
+          git checkout -b master
           node jd_fruit.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
