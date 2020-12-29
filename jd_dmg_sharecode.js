@@ -40,6 +40,25 @@ let jdPetShareCodes = [
     "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
     "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw=="
 ];
+
+//京东赚赚
+let jdzzShareCodes = [
+    "Sv_1yQBcf9EnSKR7znfAMcA",
+    "S5KkcRhod9VPRIE_3laIKcQ",
+    "S5KkcRB0b8lGDKEzzkvINcg",
+    "S5KkcRhtP_VKEdR7yx6MMdA",
+    "S5KkcRE1L_AfWKBL3kvBedg",
+    "S5KkcR0wf_ALUckz8lfIIcg"
+];
+
+let jdCrazyJoyShareCodes = [
+    "-T27v74mnA2T2bzOblxrN6t9zd5YaBeE",
+    "4312lQEtDfuj6jwPBNYbbat9zd5YaBeE",
+    "MZsuzZjCYr85oULenXYbtat9zd5YaBeE",
+    "VqlbtP1xnFVU8pTIbenr0at9zd5YaBeE",
+    "EriRyRIhDFEA8TNIcOx9xKt9zd5YaBeE",
+    "JBeUzSuR34bGgSV783WPqat9zd5YaBeE",
+];
 setupShareCodes()
 
 function setupShareCodes() {
@@ -48,9 +67,26 @@ function setupShareCodes() {
     setup_jd_benas(jdBeanShareCodes);
     setup_jd_pet(jdPetShareCodes);
     setup_jd_fruit(jdFruitShareCodes);
+    setup_jd_zz(jdzzShareCodes);
+    setup_jd_crazy_joy(jdCrazyJoyShareCodes);
 }
-function setup_dd_factory(shareCodes) {
+
+function setup_jd_crazy_joy(shareCodes) {
+    let url = "https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/互助码/"
+    shareCodes.forEach(item => {
+        requestAPI(url, item)
+    })
+}
+
+function setup_jd_crazy_joysetup_jd_zz(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/"
+    shareCodes.forEach(item => {
+        requestAPI(url, item)
+    })
+}
+
+function setup_dd_factory(shareCodes) {
+    let url = "https://code.chiang.fun/api/v1/jd/jdzz/create/互助码/"
     shareCodes.forEach(item => {
         requestAPI(url, item)
     })

@@ -52,3 +52,4 @@ jobs:
           IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
           JDJOY_SHARECODES: ${{ secrets.JDJOY_SHARECODES }}
           JDJOY_HELPSELF: ${{ secrets.JDJOY_HELPSELF }}
+          JDJOY_APPLYJDBEAN: ${{ secrets.JDJOY_APPLYJDBEAN}}
