@@ -78,7 +78,7 @@ function setup_jd_crazy_joy(shareCodes) {
     })
 }
 
-function setup_jd_crazy_joysetup_jd_zz(shareCodes) {
+function setup_jd_zz(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/"
     shareCodes.forEach(item => {
         requestAPI(url, item)
