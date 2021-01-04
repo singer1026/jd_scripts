@@ -1,4 +1,6 @@
 const request = require('request');
+const delay = require('delay');
+
 //东东工厂
 let ddShareCodes = [
     "P04z54XCjVWnYaS5jQICWDx231XkA2tQy5oreA",
@@ -10,12 +12,13 @@ let ddShareCodes = [
 ];
 //京喜工厂
 let jxShareCodes = [
-    "HB0rMhLZFoJZtMY_cxDS9w==",
-    "gkJDx-hnOQ-_glMijjvWhg==",
-    "JLsEgHVEqtL60bPohvdN6Q==",
-    "TA-2KPQiq7T_e0lI3_y-Bw==",
-    "8rb8s6xvPNh8T-xFWpPT2g==",
-    "f4484ZzDOyamcrl6gPaTqQ=="
+    // "HB0rMhLZFoJZtMY_cxDS9w==",
+    // "gkJDx-hnOQ-_glMijjvWhg==",
+    // "JLsEgHVEqtL60bPohvdN6Q==",
+    // "TA-2KPQiq7T_e0lI3_y-Bw==",
+    // "8rb8s6xvPNh8T-xFWpPT2g==",
+    // "f4484ZzDOyamcrl6gPaTqQ==",
+    "gEdLHMPMtwDvjhexnBFArg==",
 ];
 
 //种豆得豆
@@ -26,19 +29,22 @@ let jdBeanShareCodes = [
     "olmijoxgmjutypuvjs4um3t6w5bvfmzoq564sci",
     "e7lhibzb3zek3x6f6fg5zq6rthx775uqboh3mvi",
     "4npkonnsy7xi2sxblpvwpaxqo3yz75cyyk2kuli",
+    "jsavtv25oeasmfjmcbi25swa7y"
 ];
 
 //京东农场
 let jdFruitShareCodes = [
-    "8f333aa22720446f8347089776abbab7",
-    "028e924bb2674242a6accfabcbb31275",
-    "32dc6062e5c34fb5b0b4efbd3c400bcd"
+    // "8f333aa22720446f8347089776abbab7",
+    // "028e924bb2674242a6accfabcbb31275",
+    // "32dc6062e5c34fb5b0b4efbd3c400bcd",
+    "e04839dfe3b645a1a3aa1b73bf8b8ac7"
 ];
 
 //东东萌宠
 let jdPetShareCodes = [
-    "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
-    "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw=="
+    // "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
+    // "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw==",
+    "MTE1NDUwMTI0MDAwMDAwMDQzNDE4OTYz"
 ];
 
 //京东赚赚
@@ -59,74 +65,95 @@ let jdCrazyJoyShareCodes = [
     "EriRyRIhDFEA8TNIcOx9xKt9zd5YaBeE",
     "JBeUzSuR34bGgSV783WPqat9zd5YaBeE",
 ];
-setupShareCodes()
 
-function setupShareCodes() {
-    setup_dd_factory(ddShareCodes);
-    setup_jx_factory(jxShareCodes);
-    setup_jd_benas(jdBeanShareCodes);
-    setup_jd_pet(jdPetShareCodes);
-    setup_jd_fruit(jdFruitShareCodes);
-    setup_jd_zz(jdzzShareCodes);
-    setup_jd_crazy_joy(jdCrazyJoyShareCodes);
+
+(async () => {
+    await setupShareCodes()
+})();
+
+async function setupShareCodes() {
+    await setup_dd_factory(ddShareCodes);
+    await setup_jx_factory(jxShareCodes);
+    await setup_jd_benas(jdBeanShareCodes);
+    await setup_jd_pet(jdPetShareCodes);
+    await setup_jd_fruit(jdFruitShareCodes);
+    await setup_jd_zz(jdzzShareCodes);
+    await setup_jd_crazy_joy(jdCrazyJoyShareCodes);
 }
 
-function setup_jd_crazy_joy(shareCodes) {
+var sleepTimeout = 2000;
+
+async function setup_jd_crazy_joy(shareCodes) {
     let url = "https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/互助码/"
-    shareCodes.forEach(item => {
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_jd_zz(shareCodes) {
+async function setup_jd_zz(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/ddfactory/create/互助码/"
-    shareCodes.forEach(item => {
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_dd_factory(shareCodes) {
+async function setup_dd_factory(shareCodes) {
     let url = "https://code.chiang.fun/api/v1/jd/jdzz/create/互助码/"
-    shareCodes.forEach(item => {
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_jx_factory(shareCodes) {
+async function setup_jx_factory(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/jxfactory/create/互助码/"
-    shareCodes.forEach(item =>{
-        requestAPI(url,item)
-    })
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
+        requestAPI(url, item)
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_jd_benas(shareCodes){
+async function setup_jd_benas(shareCodes){
     let url = "http://api.turinglabs.net/api/v1/jd/bean/create/互助码/"
-    shareCodes.forEach(item => {
+    for(let i = 0;i<shareCodes.length;i++){
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_jd_pet(shareCodes) {
+async function setup_jd_pet(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/pet/create/互助码/"
-    shareCodes.forEach(item => {
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
-function setup_jd_fruit(shareCodes) {
+async function setup_jd_fruit(shareCodes) {
     let url = "http://api.turinglabs.net/api/v1/jd/farm/create/互助码/"
-    shareCodes.forEach(item => {
+    for (let i = 0; i < shareCodes.length; i++) {
+        let item = shareCodes[i];
         requestAPI(url, item)
-    })
+        await delay(sleepTimeout);
+    }
 }
 
 
 function requestAPI(url,item){
     let urlString = url.replace("互助码", item)
+    console.log("==========开始发请求======");
     request(urlString, function (error, response, body) {
+        console.log("==========结束发请求======");
         console.error('error:', error); // Print the error if one occurred
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
         console.log('body:', body); // Print the HTML for the Google homepage.
     });
 }
-
