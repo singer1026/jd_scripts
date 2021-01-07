@@ -12,13 +12,14 @@ let ddShareCodes = [
 ];
 //京喜工厂
 let jxShareCodes = [
-    // "HB0rMhLZFoJZtMY_cxDS9w==",
-    // "gkJDx-hnOQ-_glMijjvWhg==",
-    // "JLsEgHVEqtL60bPohvdN6Q==",
-    // "TA-2KPQiq7T_e0lI3_y-Bw==",
-    // "8rb8s6xvPNh8T-xFWpPT2g==",
-    // "f4484ZzDOyamcrl6gPaTqQ==",
+    "HB0rMhLZFoJZtMY_cxDS9w==",
+    "gkJDx-hnOQ-_glMijjvWhg==",
+    "JLsEgHVEqtL60bPohvdN6Q==",
+    "TA-2KPQiq7T_e0lI3_y-Bw==",
+    "8rb8s6xvPNh8T-xFWpPT2g==",
+    "f4484ZzDOyamcrl6gPaTqQ==",
     "gEdLHMPMtwDvjhexnBFArg==",
+    "nWT5_hMKZ-P4GHSJt8O_bg=="
 ];
 
 //种豆得豆
@@ -34,16 +35,17 @@ let jdBeanShareCodes = [
 
 //京东农场
 let jdFruitShareCodes = [
-    // "8f333aa22720446f8347089776abbab7",
-    // "028e924bb2674242a6accfabcbb31275",
-    // "32dc6062e5c34fb5b0b4efbd3c400bcd",
-    "e04839dfe3b645a1a3aa1b73bf8b8ac7"
+    "8f333aa22720446f8347089776abbab7",
+    "028e924bb2674242a6accfabcbb31275",
+    "32dc6062e5c34fb5b0b4efbd3c400bcd",
+    "e04839dfe3b645a1a3aa1b73bf8b8ac7",
+    "2f7cde422443417e808337eaaf8375df"
 ];
 
 //东东萌宠
 let jdPetShareCodes = [
-    // "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
-    // "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw==",
+    "MTAxODc2NTEzMDAwMDAwMDAyNjAyODcwOQ==",
+    "MTAxODc2NTE0NzAwMDAwMDAyNDkwODY2Mw==",
     "MTE1NDUwMTI0MDAwMDAwMDQzNDE4OTYz"
 ];
 
