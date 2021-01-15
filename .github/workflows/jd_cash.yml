@@ -17,9 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
-      # - name: Checkout
-      #   run: |
-      #     git clone -b master https://gitee.com/lxk0301/jd_scripts.git ~/jd_scripts
+      - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -36,8 +34,7 @@ jobs:
           npm install
       - name: '运行 【签到领现金】'
         run: |
-          echo &ls
-          # node jd_cash.js
+          node jd_cash.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
