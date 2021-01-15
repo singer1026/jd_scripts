@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_moneyTree
+name: 获取京东助力码
 
 on:
-
-  schedule:
-    - cron: '40 */3 * * *'
+  # workflow_dispatch:
+  # schedule:
+  #   - cron: '10-20/5 4 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: moneyTree
+    types: jd_get_share_code
 jobs:
   build:
 
@@ -31,10 +31,10 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-            npm install
-      - name: '运行 【京东摇钱树】'
+          npm install
+      - name: '运行 【获取所有互助码】'
         run: |
-            node jd_moneyTree.js
+          node jd_get_share_code.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
