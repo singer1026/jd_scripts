@@ -36,6 +36,7 @@ jobs:
           npm install
       - name: '运行 【签到领现金】'
         run: |
+          cd ~/jd_scripts
           node jd_cash.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
